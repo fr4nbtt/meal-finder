@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+input,
+button {
+  @apply border border-gray-300 bg-white rounded-tl rounded-bl text-sm py-1 px-2 m-0;
+}
+
+input[type="text"] {
+  @apply w-full;
+}
+
+.search-btn {
+  @apply border-l-0 rounded-none  rounded-tr rounded-br;
+}
