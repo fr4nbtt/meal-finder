@@ -51,7 +51,27 @@ function searchMeal(e) {
 
 // Fetch meal by ID
 function getMealByID(mealID) {
+  // CLear meals and heading
+  mealsEl.innerHTML = "";
+  resultHeading.innerHTML = "";
+
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
+    .then((res) => res.json())
+    .then((data) => {
+      const meal = data.meals[0];
+
+      addMealToDOM(meal);
+    });
+}
+
+// Fetch random meal
+
+function getRandomMeal() {
+  // CLear meals and heading
+  mealsEl.innerHTML = "";
+  resultHeading.innerHTML = "";
+
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
     .then((res) => res.json())
     .then((data) => {
       const meal = data.meals[0];
@@ -96,6 +116,7 @@ function addMealToDOM(meal) {
 
 /* Event Listeners */
 submit.addEventListener("submit", searchMeal);
+random.addEventListener("click", getRandomMeal);
 
 mealsEl.addEventListener("click", (e) => {
   const mealInfo = e.target.closest(".meal").querySelector(".meal-info");
@@ -105,5 +126,3 @@ mealsEl.addEventListener("click", (e) => {
     getMealByID(mealID);
   }
 });
-
-// git commit -m "feat: Add display random meal function and meal styling"
