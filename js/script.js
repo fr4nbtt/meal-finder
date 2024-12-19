@@ -82,9 +82,10 @@ function addMealToDOM(meal) {
       ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ""}
       ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
     </div>
-    <div class="main">    
+    <div class="main">
+      <h3>Instructions</h3>
       <p>${meal.strInstructions}</p>
-      <h2>Ingredients</h2>
+      <h3>Ingredients</h3>
       <ul>
         ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}      
       </ul>
@@ -105,4 +106,4 @@ mealsEl.addEventListener("click", (e) => {
   }
 });
 
-// git commit -m "feat: show single meal page on click"
+// git commit -m "feat: Add display random meal function and meal styling"

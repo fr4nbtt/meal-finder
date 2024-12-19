@@ -9,16 +9,18 @@ button img {
 
 input,
 button {
-  @apply border border-gray-300 bg-white rounded-tl rounded-bl text-sm py-1 px-2 m-0;
+  @apply border border-gray-300 bg-white rounded-tl rounded-bl text-sm py-1 px-2 m-0 outline-none;
 }
 
 input[type="text"] {
-  @apply w-full border-red-600;
+  @apply w-full border-cream;
 }
 
 .search-btn {
   @apply border-l-0 rounded-none  rounded-tr rounded-br;
 }
+
+/* MEALS GRID */
 
 .meals {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-16;
@@ -29,13 +31,48 @@ input[type="text"] {
 }
 
 .meal img {
-  @apply w-full h-full aspect-square border-4 border-white rounded-lg;
+  @apply w-full h-full aspect-square border-4 border-white rounded-2xl;
 }
 
 .meal-info {
-  @apply absolute top-0 left-0 h-full w-full flex items-center justify-center bg-black bg-opacity-70 opacity-0 rounded-lg transition-opacity duration-200 hover:opacity-100 ease-in text-xl px-4;
+  @apply absolute top-0 left-0 h-full w-full flex items-center justify-center bg-black bg-opacity-70 opacity-0 rounded-2xl transition-opacity duration-200 hover:opacity-100 ease-in text-xl px-4;
 }
 
+/* SINGLE MEAL */
+
 .single-meal {
-  @apply text-white;
+  @apply text-white bg-medium-green rounded-xl my-6 p-6 mx-auto w-full flex flex-col gap-3.5 justify-evenly items-center shadow-md md:w-1/2;
+}
+
+.single-meal-info {
+  @apply flex justify-center items-center gap-2;
+}
+
+.single-meal-info p {
+  @apply bg-cream p-1.5 text-zinc-700 leading-none text-sm lowercase italic rounded-md;
+}
+
+.single-meal .main {
+  @apply flex flex-col gap-3 bg-light-green text-black px-5 py-6 rounded-md leading-snug;
+}
+
+.single-meal h2 {
+  @apply text-xl;
+}
+
+.single-meal h3 {
+  @apply text-lg;
+}
+
+.single-meal h2,
+.single-meal h3 {
+  @apply font-bold;
+}
+
+.single-meal img {
+  @apply border-white border-4 rounded-xl w-full;
+}
+
+.main ul {
+  @apply list-disc list-inside text-sm;
 }
