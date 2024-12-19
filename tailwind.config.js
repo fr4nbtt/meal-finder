@@ -8,7 +8,6 @@ module.exports = {
         "medium-green": "#436850",
         "light-green": "#ADBC9F",
         cream: "#FBFADA",
-        "soft-black": "#111827",
       },
       fontFamily: {
         sans: ["Nunito", "sans-serif"],
