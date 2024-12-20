@@ -772,6 +772,12 @@ input[type="text"] {
 
 @media (min-width: 768px) {
   .single-meal {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .single-meal {
     width: 50%;
   }
 }

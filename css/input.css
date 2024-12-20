@@ -41,7 +41,7 @@ input[type="text"] {
 /* SINGLE MEAL */
 
 .single-meal {
-  @apply text-white bg-medium-green rounded-xl my-6 p-6 mx-auto w-full flex flex-col gap-3.5 justify-evenly items-center shadow-md md:w-1/2;
+  @apply text-white bg-medium-green rounded-xl my-6 p-6 mx-auto w-full flex flex-col gap-3.5 justify-evenly items-center shadow-md md:w-3/4 lg:w-1/2;
 }
 
 .single-meal-info {
